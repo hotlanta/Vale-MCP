@@ -2,46 +2,14 @@
 
 ## Core components and their roles
 
-+--------------------+------------------------------------------------------------+
-| **Component**      | **Role in the stack**                                      |
-+====================+============================================================+
-| Docker Desktop     | A one-click-install application that enables users to      |
-|                    | **build, share, and run containerized applications and     |
-|                    | microservices** on Mac, Linux, or Windows. It provides a   |
-|                    | Graphical User Interface (GUI) to manage containers and    |
-|                    | simplifies complex setups, including port mappings. It is  |
-|                    | often the recommended way to install Open WebUI and        |
-|                    | Ollama.                                                    |
-+--------------------+------------------------------------------------------------+
-| > Ollama           | The **LLM runner** responsible for serving the actual      |
-|                    | large language models. Open WebUI connects to and manages  |
-|                    | the Ollama instance.                                       |
-+--------------------+------------------------------------------------------------+
-| > Open WebUI       | The **user-facing, feature-rich, self-hosted web           |
-|                    | interface** for interacting with LLMs. Architecturally, it |
-|                    | is a web application that expects external tool            |
-|                    | communication via **standard web protocols                 |
-|                    | (HTTP/OpenAPI)**.                                          |
-+--------------------+------------------------------------------------------------+
-| > MCP Server       | > A **standardized application that exposes tools or       |
-| > (Vale-MCP)       | > resources** (functions) to an AI model. Many local MCP   |
-|                    | > servers are designed to communicate over **standard      |
-|                    | > input/output (stdio)**. The **Vale-MCP Server**          |
-|                    | > specifically integrates the Vale prose linting engine,   |
-|                    | > enabling AI assistants to check files for style and      |
-|                    | > grammar issues.                                          |
-+--------------------+------------------------------------------------------------+
-| > mcpo             | The **Critical Connector** that resolves the protocol      |
-| > (MCP-to-OpenAPI) | mismatch between Open WebUI (HTTP/OpenAPI) and the MCP     |
-| > proxy            | Server (stdio). It is a lightweight server that **wraps    |
-|                    | the local MCP server command and exposes it as a standard  |
-|                    | OpenAPI HTTP server**.                                     |
-+--------------------+------------------------------------------------------------+
-| > Vale             | > The underlying **prose linting engine** (tool) that      |
-|                    | > performs style and grammar checks on text files. This    |
-|                    | > tool is provided as a capability to the LLM via the      |
-|                    | > Vale-MCP server.                                         |
-+--------------------+------------------------------------------------------------+
+| **Component**      | **Role in the stack**      |
+|--------------------|----------------------------|
+| Docker Desktop     | A one-click-install application that enables users to **build, share, and run containerized applications and microservices** on Mac, Linux, or Windows. It provides a Graphical User Interface (GUI) to manage containers and simplifies complex setups, including port mappings. It is often the recommended way to install Open WebUI and Ollama. |
+| Ollama           | The **LLM runner** responsible for serving the actual large language models. Open WebUI connects to and manages the Ollama instance.  |
+| Open WebUI       | The **user-facing, feature-rich, self-hosted web interface** for interacting with LLMs. Architecturally, it is a web application that expects external tool communication via **standard web protocols (HTTP/OpenAPI)**.                                          |
+| MCP Server (Vale-MCP)       | A **standardized application that exposes tools or resources** (functions) to an AI model. Many local MCP servers are designed to communicate over **standard input/output (stdio)**. The **Vale-MCP Server**  pecifically integrates the Vale prose linting engine, enabling AI assistants to check files for style and grammar issues.                                          |
+| mcpo (MCP-to-OpenAPI) proxy            | The **Critical Connector** that resolves the protocol mismatch between Open WebUI (HTTP/OpenAPI) and the MCP Server (stdio). It is a lightweight server that **wraps the local MCP server command and exposes it as a standard OpenAPI HTTP server**.                                     |
+| Vale             | The underlying **prose linting engine** (tool) that performs style and grammar checks on text files. This tool is provided as a capability to the LLM via the Vale-MCP server.                                         |
 
 ## Multi-step install and configuration process
 
@@ -184,12 +152,8 @@ At the bottom of the message box in the main chat window click Integrations -\> 
 
 ## Reference commands for using Docker containers
 
-+-------------------------------+-------------------------------+
-| > **Action**                  | **Command**                   |
-+===============================+===============================+
-| Start containers              | docker compose up -d          |
-+-------------------------------+-------------------------------+
-| Stop containers               | docker compose down           |
-+-------------------------------+-------------------------------+
-| View logs                     | docker compose logs -f        |
-+-------------------------------+-------------------------------+
+| **Action**       | **Command** |
+|------------------|-------------|
+| Start containers | `docker compose up -d` |
+| Stop containers | `docker compose down` |
+| View logs | `docker compose logs -f` |

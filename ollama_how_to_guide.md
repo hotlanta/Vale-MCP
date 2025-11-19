@@ -21,7 +21,7 @@ The integration requires foundational tools (Docker and Python) to be installed 
 ## Prerequisites
 
 1.  **Install Docker Desktop:**
-    [[https://www.docker.com/products/docker-desktop/]{.underline}](https://www.docker.com/products/docker-desktop/)
+    [[https://www.docker.com/products/docker-desktop/]](https://www.docker.com/products/docker-desktop/)
 
 2.  **Install Python 3.11+:** <https://www.python.org/downloads/>
 
@@ -55,7 +55,7 @@ For CPU Only: `docker run -d -p 8080:8080 -v open-webui:/app/data --name open-we
 3.  **Access the interface**: Once running, Open WebUI is typically accessible at [http://localhost:8080](http://localhost:8080/)
 
 4.  **Download LLM model**:
-    `[[https://ollama.com/library]{.underline}](https://ollama.com/library)`
+    `[[https://ollama.com/library]](https://ollama.com/library)`
 
     for example: `docker exec -it ollama ollama pull llama3.1:8b`
 
@@ -70,7 +70,7 @@ Install Vale CLI on your machine, typically with a package manger `choco install
 2. **Install Vale-MCP server**
 
 Install Vale-MCP using the instructions found here:
-[[https://github.com/ChrisChinchilla/Vale-MCP]{.underline}](https://github.com/ChrisChinchilla/Vale-MCP)
+[[https://github.com/ChrisChinchilla/Vale-MCP]](https://github.com/ChrisChinchilla/Vale-MCP)
 **Note:** I had to modify the package.json file to get it to install without errors
 
 from `"build": "tsc && chmod 755 build/index.js",` to `"build": "tsc && node -e \"try{require('fs').chmodSync('build/index.js',0o755)}catch(e)}\"",`
@@ -87,7 +87,7 @@ In PowerShell, go to directory where Vale-MCP is saved and run the command (agai
 Example:
 `D:\hotlanta_git\Vale-MCP> uvx mcpo --port 8001 -- vale-cli`
 
-This command starts a web server on a designated port (for example, 8001) as a subprocess for incoming requests. The output should show the proxy running on an HTTP address such as [*http://0.0.0.0:8001*](http://0.0.0.0:8001)
+This command starts a web server on a designated port (for example, 8001) as a subprocess for incoming requests. The output should show the proxy running on an HTTP address such as [http://0.0.0.0:8001](http://0.0.0.0:8001)
 
 ## Configure the tool server in Open WebUI
 
@@ -96,7 +96,7 @@ The proxy's OpenAPI endpoint must be added to the Open WebUI interface.
 In Open WebUI navigate to Settings -\> External Tools -\> Manage Tools Servers -\> Add Connection (+)
 
 - Enter URL where Vale MCP server is running:
-  [[http://host.docker.internal:8001]{.underline}](http://host.docker.internal:8001)
+  [[http://host.docker.internal:8001]](http://host.docker.internal:8001)
   (this URL is used since Open WebUI is containerizes while mcpo proxy runs on your laptop)
 
 - ![](media/image3.png){width="0.3542049431321085in"
@@ -112,7 +112,7 @@ height="3.4166666666666665in"}
 In Open WebUI navigate to Settings Admin panel -\> Settings -\> External Tools -\> Manage Tool Servers -\> Add Connection (+)
 
 - Enter URL where Vale MCP server is running:
-  [[http://host.docker.internal:8001]{.underline}](http://host.docker.internal:8001/)
+  [[http://host.docker.internal:8001]](http://host.docker.internal:8001/)
 
 - Name [for connection]: Vale-MCP
 

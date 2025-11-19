@@ -21,7 +21,7 @@ The integration requires foundational tools (Docker and Python) to be installed 
 ## Prerequisites
 
 1.  **Install Docker Desktop:**
-    [[https://www.docker.com/products/docker-desktop/]](https://www.docker.com/products/docker-desktop/)
+    [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
 
 2.  **Install Python 3.11+:** <https://www.python.org/downloads/>
 
@@ -70,7 +70,7 @@ Install Vale CLI on your machine, typically with a package manger `choco install
 2. **Install Vale-MCP server**
 
 Install Vale-MCP using the instructions found here:
-[[https://github.com/ChrisChinchilla/Vale-MCP]](https://github.com/ChrisChinchilla/Vale-MCP)
+[https://github.com/ChrisChinchilla/Vale-MCP](https://github.com/ChrisChinchilla/Vale-MCP)
 **Note:** I had to modify the package.json file to get it to install without errors
 
 from `"build": "tsc && chmod 755 build/index.js",` to `"build": "tsc && node -e \"try{require('fs').chmodSync('build/index.js',0o755)}catch(e)}\"",`
@@ -97,7 +97,7 @@ In Open WebUI navigate to Settings -\> External Tools -\> Manage Tools Servers -
 
 - Enter URL where Vale MCP server is running:
   [[http://host.docker.internal:8001]](http://host.docker.internal:8001)
-  (this URL is used since Open WebUI is containerizes while mcpo proxy runs on your laptop)
+  (this URL is used since Open WebUI is containerized while mcpo proxy runs on your laptop)
 
 - ![](media/image3.png){width="0.3542049431321085in"
   height="0.33337489063867015in"}Toggle on the connection
@@ -112,7 +112,7 @@ height="3.4166666666666665in"}
 In Open WebUI navigate to Settings Admin panel -\> Settings -\> External Tools -\> Manage Tool Servers -\> Add Connection (+)
 
 - Enter URL where Vale MCP server is running:
-  [[http://host.docker.internal:8001]](http://host.docker.internal:8001/)
+  [http://host.docker.internal:8001](http://host.docker.internal:8001/)
 
 - Name [for connection]: Vale-MCP
 

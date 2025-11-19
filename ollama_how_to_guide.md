@@ -31,7 +31,7 @@ The integration requires foundational tools (Docker and Python) to be installed 
 
 ### My file structure:
 
-![](media/image2.png){width="7.135471347331584in" height="1.6041666666666667in"}
+![](media/image2.png)
 
 ## Install the core LLM stack
 
@@ -99,13 +99,11 @@ In Open WebUI navigate to Settings -\> External Tools -\> Manage Tools Servers -
   [http://host.docker.internal:8001](http://host.docker.internal:8001)
   (this URL is used since Open WebUI is containerized while mcpo proxy runs on your laptop)
 
-- ![](media/image3.png){width="0.3542049431321085in"
-  height="0.33337489063867015in"}Toggle on the connection
+- Toggle on the connection
 
-- Verify connection by clicking
+  ![](media/image3.png)
 
-![](media/image4.png){width="5.445095144356955in"
-height="3.4166666666666665in"}
+- Verify connection by clicking ![](media/image4.png)
 
 ## Configure the tool server in Open WebUI (option 2)
 
@@ -118,7 +116,7 @@ In Open WebUI navigate to Settings Admin panel -\> Settings -\> External Tools -
 
 - Toggle on the connection
 
-![](media/image5.png){width="4.94086832895888in" height="5.178249125109361in"}
+  ![](media/image5.png)
 
 ## Test the integration
 
@@ -128,9 +126,11 @@ In the main chat window, choose which model to use from the drop-down box.
 
 2. **Enable the tool**
 
-At the bottom of the message box in the main chat window click Integrations -\> Tools and toggle on the newly configured tool (Vale MCP) ![](media/image6.png){width="1.1772353455818023in" height="0.8855325896762904in"}
+At the bottom of the message box in the main chat window click Integrations -\> Tools and toggle on the newly configured tool (Vale MCP) ![](media/image6.png)
 
-**Note** that the wrench button at the bottom of the message box shows available tools and the options for each tool. ![](media/image7.png){width="1.7606594488188976in" height="0.8021894138232721in"}
+**Note** The wrench button at the bottom of the message box shows available tools and the options for each tool. 
+
+![](media/image7.png)
 
 3.  **Trigger a tool call**: Send a query to the LLM that requires the tool, such as "Use the tool_vale_status_post to check if Vale is installed."
 
@@ -138,7 +138,7 @@ At the bottom of the message box in the main chat window click Integrations -\> 
 
 ## Available options for the Vale-MCP tool
 
-![](media/image8.jpeg)
+![](media/image8.png)
 
 ## Example prompts
 

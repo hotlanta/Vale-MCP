@@ -96,7 +96,7 @@ The proxy's OpenAPI endpoint must be added to the Open WebUI interface.
 In Open WebUI navigate to Settings -\> External Tools -\> Manage Tools Servers -\> Add Connection (+)
 
 - Enter URL where Vale MCP server is running:
-  [[http://host.docker.internal:8001]](http://host.docker.internal:8001)
+  [http://host.docker.internal:8001](http://host.docker.internal:8001)
   (this URL is used since Open WebUI is containerized while mcpo proxy runs on your laptop)
 
 - ![](media/image3.png){width="0.3542049431321085in"

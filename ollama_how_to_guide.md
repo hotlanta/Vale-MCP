@@ -1,4 +1,4 @@
-# Ollama / Open WebUI / Vale-MCP server how-to guide
+# Ollama / Open WebUI / Vale-MCP Server how-to guide
 
 ## Core components and their roles
 
